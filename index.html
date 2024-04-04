@@ -68,60 +68,95 @@
             <h3>Skills and Developments</h3>
             <ul>
                 <li>HTML,CSS and JS</li>
-                <li>Python,PHP,Node JS,Express</a></li>
-                <li>UI/UX Web Design</li>
-                <li>Testing and Debugging</li>
+                <li>Python,Java</li>
+                <li>React,Node JS,Express</li>
                 <li>Git,Github</li>
-                <li>Excel,Word</li>
             </ul>
         </div>
     </section>
 
     <section id="portfolio">
-        <div class="projects">
-          <div class="portfolio-content container">
-            <div class="proj-1">
-              <img src="birth.png">
-              <div class="proj1-details">
-                <h2>BIRTHDAY PARTY</h2>
-                <h2>Birthday Invitation Website</h2>
-                <p>Build Using HTML</p>
-                <button><a target="blank">Source </a>
-                </button>
-                <button><a target="blank">Live </a>
-                </button>
-              </div>
+      <div class="projects">
+        <div class="portfolio-content container">
+          <div class="proj-1">
+            <img src="herbal.png">
+            <div class="proj1-details">
+              <h2>MYSTIC HERBAL WORLD</h2>
+              <h2>Product Landing page</h2>
+              <p>Build Using HTML,CSS</p>
+              <button><a target="blank">Source <i class="fas fa-external-link-alt"></i></a>
+              </button>
+              <button><a target="blank">Live <i class="fas fa-external-link-alt"></i></a>
+              </button>
             </div>
-            <div class="proj-2">
-              <img src="herbal.png">
-              <div class="proj2-details">
-                <h2>MYSTIC HERBAL WORLD</h2>
-                <h2>Product Landing page</h2>
-                <p>Build Using HTML,CSS</p>
-                <button><a target="blank">Source </a>
-                </button>
-                <button><a target="blank">Live </a>
-                </button>
-              </div>
+          </div>
+          <div class="proj-2">
+            <img src="boutique.png">
+            <div class="proj2-details">
+              <h2>URBAN THREADS BOUTIQUE</h2>
+              <h2>Social Media Application</h2>
+              <p>Build Using HTML,CSS,JS,Mongo DB</p>
+              <button><a target="blank">Source <i class="fas fa-external-link-alt"></i> </a>
+              </button>
+              <button><a target="blank">Live <i class="fas fa-external-link-alt"></i></a>
+              </button>
             </div>
-          </div>  
-        </div>
+          </div>
+        </div>  
+      </div>
     </section>
 
-    <section id="contact">
-      <div class="contact-info">
-        <h2>Contact Details</h2>
-        <p>Catch me Through </p>
-        <p>lakshmisr2003@gmail.com</p>
-        <p>9344387344</p>
-        <div class="social-links">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin"></i>
+    <div class="contact" id="contact-me">
+      <div class="container">
+        <div class="contact-content">
+          <h2>Contact Me</h2>
+          <p class="mail">
+            Catch me through <i class="fas fa-arrow-right"></i> lakshmisr2003@gmail.com</p>
+          <p class="links">Or find me on:</p>
+          <a href="https://www.linkedin.com/in/lakshmi-sr-686167224" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>        
+          <a href="https://github.com/Sr-lakshmi/Sr-lakshmi" target="blank"><i class="fab fa-github"></i> Github</a>
+          <a target="blank"><i class="fab fa-twitter"> Twitter</i></a>
+          <a target="blank"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
-    </div>    
-    </section>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 550) {
+              $('.navbar').addClass('solid');
+              $('.back-to-top').addClass('visible');
+          } else {
+              $('.navbar').removeClass('solid');
+              $('.back-to-top').removeClass('visible');
+          }
+  
+      });
+  });
+  $(document).ready(function () {
+      $("a").on('click', function (event) {
+          if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+              }, 800, function () {
+                  window.location.hash = hash;
+              });
+          } 
+      });
+  });
+    </script>
     
   </body>
 </html>
+
+
+
+
+
+
+
+
+
